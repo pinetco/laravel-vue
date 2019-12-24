@@ -1,5 +1,5 @@
 <template>
-    <div class="alert alert-flash"
+    <div class="alert alert-flash shadow"
          :class="'alert-'+level"
          role="alert"
          v-show="show"
@@ -19,14 +19,14 @@
             }
         },
 
-        created() {
+        created() {},
+
+        mounted() {
             if (this.message) {
                 this.flash();
             }
 
-            Bus.$on(
-                'flash', data => this.flash(data)
-            );
+            Bus.$on('flash', data => this.flash(data));
         },
 
         methods: {
@@ -55,6 +55,5 @@
         position: fixed;
         right: 25px;
         bottom: 25px;
-        z-index: 100000000000;
     }
 </style>
