@@ -7,3 +7,7 @@ window.__ = (key, replace) => {
 
     return translation;
 };
+
+window.flash = function (message, level = 'success') {
+    Bus.$emit('flash', {message, level});
+};
