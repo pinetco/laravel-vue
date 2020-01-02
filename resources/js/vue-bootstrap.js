@@ -7,6 +7,8 @@ if (window.Vue === undefined) {
     window.Bus = new Vue();
 }
 
+Vue.prototype._ = _;
+
 /**
  * Load Vue Global Mixin.
  */
