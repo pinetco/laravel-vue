@@ -23,7 +23,7 @@ window.AppFormErrors = function () {
      * Returns has-error class if the collection has errors for the given field.
      */
     this.classFor = function (field) {
-        return this.has(field) ? 'has-error' : '';
+        return this.has(field) ? 'is-invalid' : '';
     };
 
     /**
@@ -31,7 +31,7 @@ window.AppFormErrors = function () {
      */
     this.helperBlock = function (field) {
         if (this.has(field)) {
-            return '<div class="help-block" style="font-weight: bold; color: #a94442;">' + this.get(field) + '</div>';
+            return '<div class="invalid-feedback">' + this.get(field) + '</div>';
         }
     };
 
