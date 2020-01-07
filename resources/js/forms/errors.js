@@ -31,7 +31,7 @@ window.AppFormErrors = function () {
      */
     this.helperBlock = function (field) {
         if (this.has(field)) {
-            return '<div class="invalid-feedback">' + this.get(field) + '</div>';
+            return '<div class="text-danger">' + this.get(field) + '</div>';
         }
     };
 
