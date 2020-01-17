@@ -4,7 +4,7 @@
 window.AppForm = function (data) {
     var form = this;
 
-    const initialData = data;
+    const initialData = _.cloneDeep(data);
 
     $.extend(this, data);
 
