@@ -4,7 +4,7 @@
 window.AppForm = function (data) {
     var form = this;
 
-    const initialData = _.cloneDeep(data);
+    const initialData = data;
 
     $.extend(this, data);
 
@@ -37,7 +37,7 @@ window.AppForm = function (data) {
      * Reset the form to its original state.
      */
     this.reset = function() {
-        $.extend(form, initialData);
+        $.extend(form, _.cloneDeep(initialData));
         form.resetStatus();
     };
 
