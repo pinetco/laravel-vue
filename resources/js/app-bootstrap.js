@@ -2,6 +2,7 @@
  * Load various JavaScript modules that assist App.
  */
 window.URI = require('urijs');
+window.axios = require('axios');
 window._ = require('lodash');
 window.moment = require('moment');
 window.Promise = require('promise');
