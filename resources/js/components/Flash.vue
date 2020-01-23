@@ -4,6 +4,7 @@
          role="alert"
          v-show="show"
          v-text="body">
+
     </div>
 </template>
 
