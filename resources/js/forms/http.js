@@ -40,7 +40,13 @@ module.exports = {
         return new Promise((resolve, reject) => {
             form.startProcessing();
 
-            axios[method](uri, JSON.parse(JSON.stringify(form)))
+            let parsedData = form;
+
+            if(method === "delete"){
+                parsedData = {data : form};
+            }
+
+            axios[method](uri, JSON.parse(JSON.stringify(parsedData)))
                 .then(response => {
                     form.finishProcessing();
 
